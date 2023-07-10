@@ -13,13 +13,18 @@
 			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
+	<parameter name="dariTgl" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="keTgl" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT t.id_transaksi, r.id_berobat, r.nik, p.nama, r.id_dokter, d.nama_dokter, r.tgl_berobat, r.keluhan, t.total_biaya, t.cash, t.kembalian
 FROM transaksi AS t
 INNER JOIN rekam_medis AS r ON r.id_berobat = t.id_berobat
 INNER JOIN pasien AS p ON p.nik = r.nik
-INNER JOIN dokter AS d ON d.id_dokter = r.id_dokter
-]]>
+INNER JOIN dokter AS d ON d.id_dokter = r.id_dokter]]>
 	</queryString>
 	<field name="id_transaksi" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -226,8 +231,7 @@ INNER JOIN dokter AS d ON d.id_dokter = r.id_dokter
 					<textElement>
 						<font fontName="Times New Roman" size="8"/>
 					</textElement>
-					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{total_biaya})
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{total_biaya})]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="50" y="0" width="39" height="15" uuid="0cf54ff5-6bc5-4293-aeea-fc386c2dd2bf"/>
@@ -241,16 +245,14 @@ INNER JOIN dokter AS d ON d.id_dokter = r.id_dokter
 					<textElement>
 						<font fontName="Times New Roman" size="8"/>
 					</textElement>
-					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{cash})
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{cash})]]></textFieldExpression>
 				</textField>
 				<textField pattern="">
 					<reportElement x="495" y="0" width="59" height="15" uuid="1100b8c6-6cc7-40e6-b0d4-3963142029f0"/>
 					<textElement>
 						<font fontName="Times New Roman" size="8"/>
 					</textElement>
-					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{kembalian})
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Rp. " + new java.text.DecimalFormat("#,##0.00").format($F{kembalian})]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>

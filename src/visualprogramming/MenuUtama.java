@@ -247,87 +247,34 @@ private Connection conn = new helper.database().connect();
     }//GEN-LAST:event_bDokterActionPerformed
 
     private void bLaporanPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLaporanPasienActionPerformed
-        String path =".\\src\\laporan\\datapasien.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        laporanjava.dataPasien lpdp = new laporanjava.dataPasien();
+        lpdp.setVisible(true);
     }//GEN-LAST:event_bLaporanPasienActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        String path =".\\src\\laporan\\Pegawai.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//       
+        laporanjava.dataPegawai lpdg = new laporanjava.dataPegawai();
+        lpdg.setVisible(true);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        String path =".\\src\\laporan\\datadokter.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        laporanjava.dataDokter lpdd = new laporanjava.dataDokter();
+        lpdd.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        String path =".\\src\\laporan\\rmedis.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        laporanjava.Berobat lpb = new laporanjava.Berobat();
+        lpb.setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        String path =".\\src\\laporan\\Obat.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        laporanjava.Obat lpo = new laporanjava.Obat();
+        lpo.setVisible(true);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        String path =".\\src\\laporan\\transaksi.jasper";
-        JasperReport reports; 
-        try {
-            reports = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(path, null,conn);
-            JasperViewer jviewer = new JasperViewer(jprint,false);
-            jviewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            jviewer.setVisible(true);
-        } catch (JRException ex) {
-            Logger.getLogger(MenuUtama.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        laporanjava.Transaksi lpt = new laporanjava.Transaksi();
+        lpt.setVisible(true);
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void bRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRekamMedisActionPerformed
